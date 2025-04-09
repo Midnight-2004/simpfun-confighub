@@ -1,0 +1,63 @@
+[
+    {
+        "file": "./plugins/AuthMe/config.yml",
+        "name": "AuthMe配置",
+        "notice": "登录插件AuthMe的配置文件，重启服务器或者在游戏中使用/authme reload命令生效。",
+        "exps": [
+            {
+                "type": "number",
+                "name": "同IP最大注册数量",
+                "notice": "每个IP允许的最大注册数量，设为 0 表示不限制注册数量。",
+                "exp": "maxRegPerIp: ([0-9]+)"
+            },
+            {
+                "type": "boolean",
+                "name": "密码错误踢出",
+                "notice": "密码输入错误后是否立即踢出玩家。",
+                "exp": "kickOnWrongPassword: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "登录前保护背包",
+                "notice": "是否在玩家登录前保护其物品栏（需安装 ProtocolLib）?",
+                "exp": "ProtectInventoryBeforeLogIn: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "select",
+                "name": "数据库类型",
+                "notice": "如果你不知道这是做什么的，那就不要更改它！",
+                "exp": "backend: (H2|SQLITE|MARIADB|MYSQL|POSTGRESQL)",
+                "options": [
+                    {
+                    "label": "H2（only authmerereloaded）",
+                    "value": "H2"
+                    },
+                    {
+                    "label": "SQLite",
+                    "value": "SQLITE"
+                    },
+                    {
+                    "label": "MariaDB",
+                    "value": "MARIADB"
+                    },
+                    {
+                    "label": "MySQL",
+                    "value": "MYSQL"
+                    },
+                    {
+                    "label": "PostgreSQL",
+                    "value": "POSTGRESQL"
+                    }
+                ]
+            }
+        ]
+    }
+]

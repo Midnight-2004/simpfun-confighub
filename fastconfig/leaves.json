@@ -1,0 +1,129 @@
+[
+    {
+        "file": "./leaves.yml",
+        "name": "Leaves端配置",
+        "notice": "Leaves端配置文件，重启生效。更多配置内容请查看Leaves文档：https://docs.leavesmc.org/zh_Hans/leaves/reference/configuration",
+        "exps": [
+            {
+                "type": "boolean",
+                "name": "生电模式",
+                "notice": "是否开启生电模式。开启后部分Paper修改将被禁用，一些配置项将被强制覆盖并忽略配置文件中的值。",
+                "exp": "mc-technical-survival-mode: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "村民多次打折",
+                "notice": "是否允许村民感染并治愈之后的打折多次翻倍(还原为1.20.1及更早版本的特性)。",
+                "exp": "villager-infinite-discounts: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "共享村民折扣",
+                "notice": "是否允许多个玩家玩家共享同一村民折扣。",
+                "exp": "shared-villager-discounts: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "强制虚空交易",
+                "notice": "是否强制开启虚空交易。玩家穿过折跃门即视为虚空交易，无需等待区块卸载。",
+                "exp": "force-void-trade: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "末影人自然消失",
+                "notice": "是否允许手持方块的末影人自然消失。",
+                "exp": "despawn-enderman-with-block: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "无限附魔Plus",
+                "notice": "是否在物品栏中无箭矢时仍可使用拥有无限魔咒的弓，就像自身处于创造模式一样。",
+                "exp": "bow-infinity-fix: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "禁用宝库黑名单",
+                "notice": "是否禁用宝库黑名单系统，这将使得所有玩家可以无限次打开一个宝库。",
+                "exp": "disable-vault-blacklist: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "盔甲架模式切换",
+                "notice": "是否允许玩家像基岩版一样，在潜行状态下通过右键对盔甲架使用木棍切换盔甲架手臂的显示状态。",
+                "exp": "stick-change-armorstand-arm-status: (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            },
+            {
+                "type":"boolean",
+                "name": "禁用聊天举报",
+                "exp": "no-chat-sign: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "强制原版命令",
+                "notice": "是否令插件命令不覆盖原版命令。",
+                "exp": "force-minecraft-command: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "string",
+                "name": "服务端名称",
+                "notice": "指定服务端名称，可以在游戏内按下F3查看服务端名称。更改此配置可能会影响部分插件功能。",
+                "exp": "server-mod-name: (.*)"
+            },
+            {
+                "type": "select",
+                "name": "服务端语言",
+                "exp": "server-lang: (en_us|zh_cn)",
+                "options": [
+                    {
+                        "label": "简体中文(中国大陆)",
+                        "value": "zh_cn"
+                    },
+                    {
+                        "label": "English(美国)",
+                        "value": "en_us"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,117 @@
+[
+    {
+        "file": "./plugins/Geyser-Spigot/config.yml",
+        "name": "Geyser配置",
+        "notice": "互通插件Geyser的配置，重启服务器生效。更多配置内容请查看文档：https://www.yuque.com/simpfox/simpdoc/configgeyser",
+        "exps": [
+            {
+                "type": "string",
+                "name": "服务器名称",
+                "notice": "发送到Minecraft基岩版客户端的服务器名称，这在暂停菜单和设置菜单中可见。提示：请保留双引号。",
+                "exp": "server-name: (.*)"
+            },
+            {
+                "type": "number",
+                "name": "网络流量压缩等级",
+                "notice": "压缩网络流量到基岩版客户端的程度,数字越高,使用的CPU越多,但使用的带宽越小,在-1以下或9以上没有任何效果,设置为-1以禁用。",
+                "exp": "compression-level: (-?[0-9]*)"
+            },
+            {
+                "type": "select",
+                "name": "基岩版验证模式",
+                "notice": "设置基岩版账户的认证模式，Floodgate模式请参见 https://geysermc.org/wiki/floodgate/",
+                "exp": "auth-type: (auto|online|offline|floodgate)",
+                "options": [
+                    {
+                        "label": "自动选择",
+                        "value": "auto"
+                    },
+                    {
+                        "label": "在线模式(基岩版需要登录Java版账户)",
+                        "value": "online"
+                    },
+                    {
+                        "label": "离线模式(基岩版不进行认证)",
+                        "value": "offline"
+                    },
+                    {
+                        "label": "Floodgate(由Floodgate插件管理)",
+                        "value": "floodgate"
+                    }
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "继承Motd",
+                "notice": "启用后，将使用Java版服务器的Motd。",
+                "exp": "passthrough-motd: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "string",
+                "name": "Motd1",
+                "notice": "显示在基岩版服务器列表中的第一行Motd，当<b>继承motd</b>为关闭时生效。注意：请保留双引号。",
+                "exp": "motd1: (.*)"
+            },
+            {
+                "type": "string",
+                "name": "Motd2",
+                "notice": "显示在基岩版服务器列表中的第二行Motd，当<b>继承motd</b>为关闭时生效。注意：请保留双引号。",
+                "exp": "motd2: (.*)"
+            },
+            {
+                "type": "boolean",
+                "name": "继承玩家数量",
+                "notice": "将玩家计数和最大玩家中继到基岩版玩家",
+                "exp": "passthrough-player-counts: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "select",
+                "name": "攻击冷却条样式",
+                "notice": "是否发送虚拟的攻击冷却指示器？基岩版玩家因仍使用1.8战斗机制，默认无法看到冷却效果。",
+                "exp": "show-cooldown: (title|actionbar|false)",
+                "options": [
+                    {
+                        "label": "标题样式",
+                        "value": "title"
+                    },
+                    {
+                        "label": "动作栏样式",
+                        "value": "actionbar"
+                    },
+                    {
+                        "label": "禁用",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "显示坐标",
+                "notice": "是否让基岩版客户端显示坐标。",
+                "exp": "show-coordinates: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "允许下界上层建造",
+                "notice": "基岩版会阻止在下界（Y>127）处建造和显示方块。此配置选项通过将下界维度ID更改为末地ID来解决该限制。主要缺点是整个下界将呈现相同的红色迷雾效果，而无法按生物群系显示不同迷雾。",
+                "exp": "above-bedrock-nether-building: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            }
+        ]
+    }
+]
