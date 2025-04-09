@@ -1,0 +1,53 @@
+[
+    {
+        "file": "./plugins/ViaVersion/config.yml",
+        "name": "ViaVersion配置",
+        "notice": "跨版本插件ViaVersion的配置文件，重启服务器生效。官方文档：https://docs.viaversion.com",
+        "exps": [
+            {
+                "type": "boolean",
+                "name": "发送支持版本",
+                "notice": "是否在在服务器状态(Ping)响应数据包中包含支持的版本号？",
+                "exp": "send-supported-versions: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "string",
+                "name": "客户端版本黑名单",
+                "notice": "此配置项为“客户端协议版本黑名单”的上位替代。设置客户端版本黑名单，玩家连接服务器时，如果客户端版本在黑名单中，则拒绝连接。示例：要屏蔽 1.16.4、所有低于 1.16 的版本以及所有高于 1.17.1 的版本：[\"<1.16\", \"1.16.4\", \">1.17.1\"]",
+                "exp": "block-versions: (.*)"
+            },
+            {
+                "type": "string",
+                "name": "客户端协议版本黑名单",
+                "notice": "屏蔽特定的 Minecraft 协议版本号，可以与“客户端版本黑名单”配合使用。完整协议版本列表：https://minecraft.wiki/w/Protocol_version 或使用生成器：https://via.krusic22.com",
+                "exp": "block-protocols: (.*)"
+            },
+            {
+                "type": "string",
+                "name": "进服提示信息",
+                "notice": "修改屏蔽客户端连接时的提示信息。提示：修改时请保留单引号，否则会出现错误。",
+                "exp": "block-disconnect-msg: (.*)"    
+            },
+            {
+                "type": "string",
+                "name": "重载提示信息",
+                "notice": "如果使用 ProtocolLib，重载插件将不得不踢出玩家。可在此自定义使用 ProtocolLib 时的重载踢出提示信息。提示：修改时请保留单引号，否则会出现错误。",
+                "exp": "reload-disconnect-msg: (.*)"
+            },
+            {
+                "type": "boolean",
+                "name": "禁用NBT警告信息",
+                "notice": "当跨版本转换物品/方块或组件/NBT 数据出错时会发出警告，是否抑制这些警告？（仅在警告刷屏时建议开启）",
+                "exp": "suppress-conversion-warnings: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            }
+        ]
+    }
+]
