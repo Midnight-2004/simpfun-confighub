@@ -2,7 +2,7 @@
     {
         "file": "./plugins/ViaVersion/config.yml",
         "name": "ViaVersion配置",
-        "notice": "跨版本插件ViaVersion的配置文件，重启服务器生效。官方文档：https://docs.viaversion.com",
+        "notice": "跨版本插件ViaVersion的配置文件，重启服务器生效。关于跨版本兼容性的配置请查看官方文档：https://docs.viaversion.com",
         "exps": [
             {
                 "type": "boolean",
@@ -29,19 +29,19 @@
             {
                 "type": "string",
                 "name": "进服提示信息",
-                "notice": "修改屏蔽客户端连接时的提示信息。提示：修改时请保留单引号，否则会出现错误。",
+                "notice": "修改被屏蔽的客户端版本连接时的提示信息。提示：修改时请保留单引号，否则会出现错误。",
                 "exp": "block-disconnect-msg: (.*)"    
             },
             {
                 "type": "string",
                 "name": "重载提示信息",
-                "notice": "如果使用 ProtocolLib，重载插件将不得不踢出玩家。可在此自定义使用 ProtocolLib 时的重载踢出提示信息。提示：修改时请保留单引号，否则会出现错误。",
+                "notice": "如果使用 ProtocolLib，重载本插件时将不得不踢出玩家。可在此自定义使用 ProtocolLib 时的重载踢出提示信息。提示：修改时请保留单引号，否则会出现错误。",
                 "exp": "reload-disconnect-msg: (.*)"
             },
             {
                 "type": "boolean",
                 "name": "禁用NBT警告信息",
-                "notice": "当跨版本转换物品/方块或组件/NBT 数据出错时会发出警告，是否抑制这些警告？（仅在警告刷屏时建议开启）",
+                "notice": "当跨版本转换物品/方块或组件/NBT数据出错时会发出警告，是否抑制这些警告？（仅在警告刷屏时建议开启）",
                 "exp": "suppress-conversion-warnings: (true|false)",
                 "rule": [
                     "true",

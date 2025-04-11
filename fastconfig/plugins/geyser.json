@@ -7,7 +7,7 @@
             {
                 "type": "string",
                 "name": "服务器名称",
-                "notice": "发送到Minecraft基岩版客户端的服务器名称，这在暂停菜单和设置菜单中可见。提示：请保留双引号。",
+                "notice": "发送到Minecraft基岩版客户端的服务器名称，这在暂停菜单和设置菜单中可见。注意：请保留双引号。",
                 "exp": "server-name: (.*)"
             },
             {
@@ -65,7 +65,7 @@
             {
                 "type": "boolean",
                 "name": "继承玩家数量",
-                "notice": "将玩家计数和最大玩家中继到基岩版玩家",
+                "notice": "将玩家计数和最大玩家中继到基岩版玩家。",
                 "exp": "passthrough-player-counts: (true|false)",
                 "rule": [
                     "true",
@@ -105,7 +105,7 @@
             {
                 "type": "boolean",
                 "name": "允许下界上层建造",
-                "notice": "基岩版会阻止在下界（Y>127）处建造和显示方块。此配置选项通过将下界维度ID更改为末地ID来解决该限制。主要缺点是整个下界将呈现相同的红色迷雾效果，而无法按生物群系显示不同迷雾。",
+                "notice": "基岩版会阻止在下界Y>127处建造和显示方块。此配置选项通过将下界维度ID更改为末地ID来解决该限制。主要缺点是整个下界将呈现相同的红色迷雾效果，而无法按生物群系显示不同迷雾。",
                 "exp": "above-bedrock-nether-building: (true|false)",
                 "rule": [
                     "true",

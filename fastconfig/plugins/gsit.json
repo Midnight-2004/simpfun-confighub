@@ -1,0 +1,104 @@
+[
+    {
+        "file": "./plugins/GSit/config.yml",
+        "name": "GSit配置",
+        "notice": "插件GSit的配置文件，重载插件生效。",
+        "exps": [
+            {
+                "type": "boolean",
+                "name": "受到伤害后强制玩家站起",
+                "exp": "get-up-damage: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "脚下方块破坏时站起",
+                "notice": "开启后，当脚下方块被破坏时强制玩家站起。",
+                "exp": "get-up-break: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "在不安全的地方坐下",
+                "notice": "允许在不安全的位置坐下或摆姿势。",
+                "exp": "allow-unsafe : (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "独占方块",
+                "notice": "每个方块只允许一个玩家坐下或摆姿势。",
+                "exp": "same-block-rest: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "置于方块中心",
+                "notice": "坐下或摆姿势时将玩家置于方块中心。",
+                "exp": "center-block: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "允许玩家堆叠",
+                "notice": "允许玩家坐在其他玩家的头上。",
+                "exp": "allow-sit: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "number",
+                "name": "玩家堆叠数",
+                "notice": "可以堆叠的最大玩家数量（0表示无限制）。",
+                "exp": "max-stack: ([0-9]+)"
+            },
+            {
+                "type": "boolean",
+                "name": "潜行弹出乘客",
+                "notice": "潜行时强制弹出坐在头上的人。",
+                "exp": "sneak-ejects: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "躺下重置休息时间",
+                "notice": "使用命令/lay躺下时是否重置玩家上次休息的时间（影响幻翼生成计时器）。",
+                "exp": "lay-rest: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "/lay躺下计入睡觉",
+                "notice": "将使用命令/lay躺下的玩家计入跳过夜晚的条件（至少需要有一个玩家在床上睡觉）",
+                "exp": "lay-night-skip: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            }
+        ]
+    }
+]
