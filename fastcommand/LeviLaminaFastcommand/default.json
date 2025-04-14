@@ -1,0 +1,270 @@
+[
+    {
+        "type": "list",
+        "name": "玩家管理",
+        "list": [
+            {
+                "type": "list",
+                "name": "OP管理",
+                "list": [
+                    {
+                        "type": "item",
+                        "notice": "设置一名玩家为服务器的管理员，管理员<b>允许运行作弊指令</b>。<br />玩家进入服务器后或在服务器中时再设置管理员。",
+                        "name": "设置管理员（OP）",
+                        "params": [
+                            {
+                                "name": "玩家名",
+                                "type": "string",
+                                "hint": "请输入玩家名"
+                            }
+                        ],
+                        "command": "op !{1}",
+                        "delay": false
+                    },
+                    {
+                        "type": "item",
+                        "notice": "取消一名玩家管理员的资格。<br />此玩家首先需要为管理员。",
+                        "name": "取消管理员（OP）",
+                        "params": [
+                            {
+                                "name": "玩家名",
+                                "type": "string",
+                                "hint": "请输入玩家名"
+                            }
+                        ],
+                        "command": "deop !{1}",
+                        "delay": false
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "name": "封禁管理",
+                "list": [
+                    {
+                        "type": "item",
+                        "notice": "封禁此玩家名。<br />此玩家被封禁后将<b>无法进入服务器。</b>",
+                        "name": "封禁玩家",
+                        "params": [
+                            {
+                                "name": "玩家名",
+                                "type": "string",
+                                "hint": "请输入玩家名"
+                            }
+                        ],
+                        "command": "ban !{1}",
+                        "delay": false
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "name": "解禁管理",
+                "list": [
+                    {
+                        "type": "item",
+                        "notice": "解禁此玩家名。<br />首先，这个玩家名必须<b>被封禁</b>。",
+                        "name": "解禁玩家",
+                        "params": [
+                            {
+                                "name": "玩家名",
+                                "type": "string",
+                                "hint": "请输入玩家名"
+                            }
+                        ],
+                        "command": "unban !{1}",
+                        "delay": false
+                    }
+                ]
+            },
+            {
+                "type": "item",
+                "notice": "踢出一个玩家。<br />此玩家必须在服务器内，且此玩家<b>仍可以重连服务器</b>。",
+                "name": "踢出玩家",
+                "params": [
+                    {
+                        "name": "玩家名",
+                        "type": "string",
+                        "hint": "请输入玩家名"
+                    }
+                ],
+                "command": "kick !{1}",
+                "delay": false
+            }
+        ]
+    },
+    {
+        "type": "list",
+        "name": "服务器管理",
+        "list": [
+            {
+                "type": "item",
+                "notice": "更改游戏难度。<br /><b>更建议在server.properties中修改</b>。",
+                "name": "更改难度",
+                "params": [
+                    {
+                        "name": "难度",
+                        "type": "select",
+                        "options": [
+                            {
+                                "label": "简单",
+                                "value": "easy"
+                            },
+                            {
+                                "label": "普通",
+                                "value": "normal"
+                            },
+                            {
+                                "label": "困难",
+                                "value": "hard"
+                            },
+                            {
+                                "label": "和平",
+                                "value": "peaceful"
+                            }
+                        ]
+                    }
+                ],
+                "command": "difficulty !{1}",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "修改游戏时间。",
+                "name": "更改时间",
+                "params": [
+                    {
+                        "name": "时间",
+                        "type": "select",
+                        "options": [
+                            {
+                                "label": "白天",
+                                "value": "day"
+                            },
+                            {
+                                "label": "夜晚",
+                                "value": "night"
+                            }
+                        ]
+                    }
+                ],
+                "command": "time set !{1}",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "更改游戏天气。",
+                "name": "更改天气",
+                "params": [
+                    {
+                        "name": "天气",
+                        "type": "select",
+                        "options": [
+                            {
+                                "label": "晴朗",
+                                "value": "clear"
+                            },
+                            {
+                                "label": "下雨",
+                                "value": "rain"
+                            },
+                            {
+                                "label": "雷暴雨",
+                                "value": "thunder"
+                            }
+                        ]
+                    }
+                ],
+                "command": "weather !{1}",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "列出正在游玩此服务器的玩家。",
+                "name": "列出在线玩家",
+                "command": "list",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "获得服务器的游戏版本，服务端类型等信息。",
+                "name": "获得服务器版本",
+                "command": "version",
+                "delay": false
+            }
+        ]
+    },
+    {
+        "type": "item",
+        "notice": "在控制台中发言。<br />游戏中的玩家，会看到以server开头的消息。",
+        "name": "发言",
+        "params": [
+            {
+                "name": "内容",
+                "type": "string",
+                "hint": "请输入内容",
+                "quote": true
+            }
+        ],
+        "command": "say !{1}",
+        "delay": false
+    },
+    {
+        "type": "list",
+        "name": "插件管理",
+        "list": [
+            {
+                "type": "item",
+                "notice": "给服务器加装插件",
+                "name": "加载插件",
+                "params": [
+                    {
+                        "name": "插件名称",
+                        "type": "string",
+                        "hint": "请输入插件名称\n如加装一个名字叫ban的插件  那么名字就写ban",
+                        "quote": true
+                    }
+                ],
+                "command": "ll load !{1}",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "给服务器重载插件",
+                "name": "重载插件",
+                "params": [
+                    {
+                        "name": "插件名称",
+                        "type": "string",
+                        "hint": "请输入插件名称",
+                        "quote": true
+                    }
+                ],
+                "command": "ll reload !{1}",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "给服务器卸载插件",
+                "name": "卸载插件",
+                "params": [
+                    {
+                        "name": "插件名称",
+                        "type": "string",
+                        "hint": "请输入插件名称",
+                        "quote": true
+                    }
+                ],
+                "command": "ll unload !{1}",
+                "delay": false
+            },
+            {
+                "type": "item",
+                "notice": "给服务器列出所有插件",
+                "name": "列出所有插件",
+                "command": "ll list",
+                "delay": false
+            }
+        ]
+    }
+]
