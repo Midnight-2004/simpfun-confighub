@@ -204,7 +204,7 @@
                 "type": "string",
                 "name": "生成器设置",
                 "exp": "generator-settings=(.*)",
-                "notice": "本属性质用于自定义世界的生成。请前往 https://zh.minecraft.wiki/ 搜索超平坦世界和自定义了解正确的设定及例子。"
+                "notice": "本属性用于自定义世界的生成。请前往 https://zh.minecraft.wiki/ 搜索超平坦世界和自定义了解正确的设定及例子。"
             },
             {
                 "type": "number",

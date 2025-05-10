@@ -1,0 +1,65 @@
+[
+    {
+        "file": "/purpur.yml",
+        "name": "purpur端配置文件",
+        "notice": "purpur端配置文件，重启生效。",
+        "exps": [
+            {
+                "type": "boolean",
+                "name": "死亡消息显示源物品",
+                "notice": "设置为 true 以在玩家死亡消息中始终显示导致玩家死亡的物品。",
+                "exp": "player-deaths-always-show-item: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "聊天顺序错误踢出玩家",
+                "notice": "如果为 false，那么将会服务器不会因为聊天顺序错误而踢出玩家。",
+                "exp": "kick-for-out-of-order-chat: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "使用原版随机数",
+                "notice": "设置为 true 以使用原版随机数生成器，以便允许RNG操作。Paper通过使用共享并且锁定的随机数来修补RNG操作。这带来了性能提升，但技术玩家可能更喜欢关闭它以便能操作 RNG。",
+                "exp": "shared-random: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "string",
+                "name": "服务端名称",
+                "notice": "指定服务端名称，可以在游戏内按下F3查看服务端名称。更改此配置可能会影响部分插件功能。",
+                "exp": "server-mod-name: (.*)"
+            },
+            {
+                "type": "boolean",
+                "name": "TPS自稳",
+                "notice": "TPS 自稳（TPS Catchup）会使服务器的 TPS 超过 20，试图在任何低于 20 的时间段后，尽量将平均 TPS 保持在接近 20 的水平，但也会带来一些副作用。例如，在网络延迟高峰期，玩家可能会被怪物瞬间击杀。",
+                "exp": "tps-catchup: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "输出配置至日志",
+                "notice": "是否在服务器启动时将所有配置值输出到服务器日志中。",
+                "exp": "verbose: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            }
+        ]
+    }
+]

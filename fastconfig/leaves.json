@@ -104,6 +104,16 @@
                 ]
             },
             {
+                "type": "boolean",
+                "name": "使用原版随机数",
+                "notice": "设置为 true 以使用原版随机数生成器，以便允许RNG操作。Paper 通过使用共享并且锁定的随机数来修补RNG操作。这带来了性能提升，但技术玩家可能更喜欢关闭它以便能操作 RNG。",
+                "exp": "use-vanilla-random: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
                 "type": "string",
                 "name": "服务端名称",
                 "notice": "指定服务端名称，可以在游戏内按下F3查看服务端名称。更改此配置可能会影响部分插件功能。",
