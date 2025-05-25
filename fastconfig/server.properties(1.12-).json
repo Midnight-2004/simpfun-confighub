@@ -2,7 +2,7 @@
     {
         "file": "/server.properties",
         "name": "服务端基础配置",
-        "notice": "MC服务端基础配置，重启生效。",
+        "notice": "MC服务端基础配置，兼容旧版本的某些选项的数字ID类型，适用于1.12.2及以下版本，重启生效。",
         "exps": [
             {
                 "type": "string",
@@ -18,7 +18,8 @@
             {
                 "type": "select",
                 "name": "游戏难度",
-                "exp": "difficulty=(peaceful|easy|normal|hard)",
+                "notice": "选择游戏难度。提示：数字ID作用与英文名相同，此处为兼容处理。",
+                "exp": "difficulty=(peaceful|easy|normal|hard|0|1|2|3)",
                 "options": [
                     {
                         "label": "和平",
@@ -35,6 +36,22 @@
                     {
                         "label": "困难",
                         "value": "hard"
+                    },
+                    {
+                        "label": "和平(数字ID 0)",
+                        "value": "0"
+                    },
+                    {
+                        "label": "简单(数字ID 1)",
+                        "value": "1"
+                    },
+                    {
+                        "label": "普通(数字ID 2)",
+                        "value": "2"
+                    },
+                    {
+                        "label": "困难(数字ID 3)",
+                        "value": "3"
                     }
                 ]
             },
@@ -45,16 +62,10 @@
                 "exp": "view-distance=([0-9]+)"
             },
             {
-                "type": "number",
-                "name": "模拟距离",
-                "notice": "当玩家远离区块的距离超过设定值后，该区块会停止加载。生物、植物停止生长；红石系统停止运行，且实体将不渲染，方块停止更新渲染。建议4-8。较高的值会显著降低服务器性能。",
-                "exp": "simulation-distance=([0-9]+)"
-            },
-            {
                 "type": "select",
                 "name": "游戏模式",
-                "notice": "选择玩家的默认游戏模式。",
-                "exp": "gamemode=(survival|creative|adventure|spectator)",
+                "notice": "选择玩家的默认游戏模式。提示：数字ID作用与英文名相同，此处为兼容处理。",
+                "exp": "gamemode=(survival|creative|adventure|0|1|2)",
                 "options": [
                     {
                         "label": "生存模式",
@@ -69,8 +80,16 @@
                         "value": "adventure"
                     },
                     {
-                        "label": "旁观模式",
-                        "value": "spectator"
+                        "label": "生存模式(数字ID 0)",
+                        "value": "0"
+                    },
+                    {
+                        "label": "创造模式(数字ID 1)",
+                        "value": "1"
+                    },
+                    {
+                        "label": "冒险模式(数字ID 2)",
+                        "value": "2"
                     }
                 ]
             },
@@ -168,12 +187,6 @@
                 "name": "玩家挂机踢出",
                 "notice": "玩家挂机多久将会被踢出服务器，设置为0不进行判断，单位分钟。",
                 "exp": "player-idle-timeout=([0-9]+)"
-            },
-            {
-                "type": "number",
-                "name": "暂停服务器运算",
-                "notice": "服务器在没有玩家在线的指定时长后自动停止计算。设置为负数则不会自动停止计算，单位秒。",
-                "exp": "pause-when-empty-seconds=(-?[0-9]*)"
             },
             {
                 "type": "number",
