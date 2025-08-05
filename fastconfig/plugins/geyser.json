@@ -43,7 +43,7 @@
             {
                 "type": "boolean",
                 "name": "继承Motd",
-                "notice": "启用后，将使用Java版服务器的Motd。",
+                "notice": "启用时，将使用Java版服务器的Motd。关闭时，将使用下方两个配置中设置的Motd。",
                 "exp": "passthrough-motd: (true|false)",
                 "rule": [
                     "true",

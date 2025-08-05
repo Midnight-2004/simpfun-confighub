@@ -37,7 +37,7 @@
                 "exp": "backend: (H2|SQLITE|MARIADB|MYSQL|POSTGRESQL)",
                 "options": [
                     {
-                    "label": "H2（only authmerereloaded）",
+                    "label": "H2（only AuthmeReReloaded）",
                     "value": "H2"
                     },
                     {

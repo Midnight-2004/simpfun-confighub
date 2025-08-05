@@ -95,6 +95,26 @@
             },
             {
                 "type": "boolean",
+                "name": "启用刷线机",
+                "notice": "是否重新引入 1.21.2 版本前的常亮绊线和绊线复制技术。",
+                "exp": "string-tripwire-hook-duplicate: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "进入3秒无敌",
+                "notice": "是否重新引入 1.21.4 版本前的机制：允许玩家在进入游戏后的几秒内免疫伤害。",
+                "exp": "spawn-invulnerable-time: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "boolean",
                 "name": "强制原版命令",
                 "notice": "是否令插件命令不覆盖原版命令。",
                 "exp": "force-minecraft-command: (true|false)",

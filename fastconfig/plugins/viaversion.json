@@ -16,18 +16,6 @@
             },
             {
                 "type": "string",
-                "name": "客户端版本黑名单",
-                "notice": "此配置项为“客户端协议版本黑名单”的上位替代。设置客户端版本黑名单，玩家连接服务器时，如果客户端版本在黑名单中，则拒绝连接。示例：要屏蔽 1.16.4、所有低于 1.16 的版本以及所有高于 1.17.1 的版本：[\"<1.16\", \"1.16.4\", \">1.17.1\"]",
-                "exp": "block-versions: (.*)"
-            },
-            {
-                "type": "string",
-                "name": "客户端协议版本黑名单",
-                "notice": "屏蔽特定的 Minecraft 协议版本号，可以与“客户端版本黑名单”配合使用。完整协议版本列表：https://minecraft.wiki/w/Protocol_version 或使用生成器：https://via.krusic22.com",
-                "exp": "block-protocols: (.*)"
-            },
-            {
-                "type": "string",
                 "name": "进服提示信息",
                 "notice": "修改被屏蔽的客户端版本连接时的提示信息。提示：修改时请保留单引号，否则会出现错误。",
                 "exp": "block-disconnect-msg: (.*)"    
