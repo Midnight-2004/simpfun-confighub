@@ -1,8 +1,8 @@
 [
     {
         "file": "./leaves.yml",
-        "name": "Leaves端配置",
-        "notice": "Leaves端配置文件，重启生效。更多配置内容请查看Leaves文档：https://docs.leavesmc.org/zh_Hans/leaves/reference/configuration",
+        "name": "Leaves服务端配置",
+        "notice": "Leaves 服务端配置文件，重启生效。更多配置内容请查看Leaves文档：https://docs.leavesmc.org/zh_Hans/leaves/reference/configuration",
         "exps": [
             {
                 "type": "boolean",

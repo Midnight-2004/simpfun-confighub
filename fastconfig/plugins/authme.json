@@ -1,7 +1,7 @@
 [
     {
         "file": "./plugins/AuthMe/config.yml",
-        "name": "AuthMe配置",
+        "name": "AuthMe 配置",
         "notice": "登录插件AuthMe的配置文件，重启服务器或者在游戏中使用/authme reload命令生效。",
         "exps": [
             {

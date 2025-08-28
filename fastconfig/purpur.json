@@ -1,8 +1,8 @@
 [
     {
         "file": "/purpur.yml",
-        "name": "purpur端配置",
-        "notice": "purpur端配置文件，重启生效。",
+        "name": "Purpur 服务端配置",
+        "notice": "Purpur 服务端配置文件，重启生效。",
         "exps": [
             {
                 "type": "boolean",

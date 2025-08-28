@@ -1,0 +1,183 @@
+[
+    {
+        "file": "./plugins/Dominion/config.yml",
+        "name": "Dominion 配置",
+        "notice": "领地插件 Dominion 的配置文件，保存后重启服务器或者在游戏中使用/dominion reload命令生效。官方文档：https://dominion.lunadeer.cn/notes/doc/owner/config-ref/config/",
+        "exps": [
+            {
+                "type": "select",
+                "name": "界面UI样式",
+                "notice": "设置玩家默认使用的界面类型，基岩版默认使用CUI。",
+                "exp": "default-ui-type: (BY_PLAYER|CUI|TUI)",
+                "options": [
+                    {
+                        "label": "由玩家自行决定",
+                        "value": "BY_PLAYER"
+                    },
+                    {
+                        "label": "CUI(箱子界面，选择此项后玩家无法自行更改界面)",
+                        "value": "CUI"
+                    },
+                    {
+                        "label": "TUI(文本界面，选择此项后玩家无法自行更改界面)",
+                        "value": "TUI"
+                    }
+                ]
+            },
+            {
+                "type": "number",
+                "name": "自动创建领地半径",
+                "notice": "自动创建领地时的领地半径。例如设置为10时使用自动创建功能，将以玩家为中心创建一个20x20x20的领地。设置为-1时将禁用自动创建功能。",
+                "exp": "auto-create-radius: (-?[0-9]*)"
+            },
+            {
+                "type": "number",
+                "name": "未登录领地清理天数",
+                "notice": "超过此天数未登录的玩家领地将被清理。设置为-1时将禁用自动清理功能。",
+                "exp": "auto-clean-after-days: (-?[0-9]*)"
+            },
+            {
+                "type": "number",
+                "name": "出生点保护半径",
+                "notice": " 出生点保护半径，防止玩家在出生点附近创建领地。",
+                "exp": "server-spawn-protection-radius: ([0-9]+)"
+            },
+            {
+                "type": "string",
+                "name": "圈地工具",
+                "notice": "设置使用什么物品来进行手动圈地。需要按照Bukiit的全大写格式填写物品名称。",
+                "exp": "select-tool: (.*)"
+            },
+            {
+                "type": "string",
+                "name": "领地信息查看工具",
+                "notice": "设置使用什么物品来查看领地信息。需要按照Bukiit的全大写格式填写物品名称。",
+                "exp": "info-tool: (.*)"
+            },
+            {
+                "type": "select",
+                "name": "消息提示位置1",
+                "notice": "当玩家无权限时提示消息的位置。",
+                "exp": " no-permission-display-place: (BOSS_BAR|ACTION_BAR|TITLE|SUBTITLE|CHAT)",
+                "options": [
+                    {
+                        "label": "Boss栏",
+                        "value": "BOSS_BAR"
+                    },
+                    {
+                        "label": "动作栏",
+                        "value": "ACTION_BAR"
+                    },
+                    {
+                        "label": "标题栏",
+                        "value": "TITLE"
+                    },
+                    {
+                        "label": "副标题栏",
+                        "value": "SUBTITLE"
+                    },
+                    {
+                        "label": "聊天栏",
+                        "value": "CHAT"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "name": "消息提示位置2",
+                "notice": "当玩家进入或离开领地时提示消息的位置。",
+                "exp": "enter-leave-display-place: (BOSS_BAR|ACTION_BAR|TITLE|SUBTITLE|CHAT)",
+                "options": [
+                    {
+                        "label": "Boss栏",
+                        "value": "BOSS_BAR"
+                    },
+                    {
+                        "label": "动作栏",
+                        "value": "ACTION_BAR"
+                    },
+                    {
+                        "label": "标题栏",
+                        "value": "TITLE"
+                    },
+                    {
+                        "label": "副标题栏",
+                        "value": "SUBTITLE"
+                    },
+                    {
+                        "label": "聊天栏",
+                        "value": "CHAT"
+                    }
+                ]
+            },
+            {
+                "type": "boolean",
+                "name": "Res数据迁移",
+                "notice": "是否允许玩家从 Residence 迁移领地数据。",
+                "exp": "residence-migration: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "select",
+                "name": "插件语言",
+                "exp": "language: (en_us|zh_cn|zh_tw|jp_jp)",
+                "options": [
+                    {
+                        "label": "English(USA)",
+                        "value": "en_us"
+                    },
+                    {
+                        "label": "简体中文",
+                        "value": "zh_cn"
+                    },
+                    {
+                        "label": "繁體中文",
+                        "value": "zh_tw"
+                    },
+                    {
+                        "label": "日本語",
+                        "value": "jp_jp"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "file": "./plugins/Dominion/limitations/default.yml",
+        "name": "Dominion 领地默认限制配置",
+        "notice": "Dominion 通过此配置文件来控制玩家默认情况下创建领地的限制，保存后重启服务器或者在游戏中使用/dominion reload命令生效。官方文档：https://dominion.lunadeer.cn/notes/doc/owner/config-ref/limitations/",
+        "exps": [
+            {
+                "type": "number",
+                "name": "方块单价",
+                "notice": "玩家创建领地时，每个方块的价格。",
+                "exp": "price-per-block: ([0-9]+(?:\\.[0-9]+)?)"
+            },
+            {
+                "type": "boolean",
+                "name": "仅以面积计算价格",
+                "notice": "玩家创建领地时，是否仅以面积计算价格。",
+                "exp": "square-only: (true|false)",
+                "rule": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "type": "number",
+                "name": "退还比例",
+                "notice": "玩家删除或缩小领地时退还费用的比例。",
+                "exp": "refund-rate: ([0-9]+(?:\\.[0-9]+)?)"
+            },
+            {
+                "type": "number",
+                "name": "领地总上限",
+                "notice": "玩家可创建的领地总数上限。设置为-1则无限制。",
+                "exp": "amount-all-over-the-world: (-?[0-9]+)"
+            }
+        ]
+    }
+]

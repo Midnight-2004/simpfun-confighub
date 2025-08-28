@@ -1,7 +1,7 @@
 [
     {
         "file": "./plugins/Geyser-Spigot/config.yml",
-        "name": "Geyser配置",
+        "name": "Geyser 配置",
         "notice": "互通插件Geyser的配置，重启服务器生效。更多配置内容请查看文档：https://www.yuque.com/simpfox/simpdoc/configgeyser",
         "exps": [
             {

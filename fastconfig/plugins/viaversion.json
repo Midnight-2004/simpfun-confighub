@@ -1,7 +1,7 @@
 [
     {
         "file": "./plugins/ViaVersion/config.yml",
-        "name": "ViaVersion配置",
+        "name": "ViaVersion 配置",
         "notice": "跨版本插件ViaVersion的配置文件，重启服务器生效。关于跨版本兼容性的配置请查看官方文档：https://docs.viaversion.com",
         "exps": [
             {

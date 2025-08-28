@@ -1,7 +1,7 @@
 [
     {
         "file": "./plugins/GSit/config.yml",
-        "name": "GSit配置",
+        "name": "GSit 配置",
         "notice": "插件GSit的配置文件，重载插件生效。",
         "exps": [
             {
