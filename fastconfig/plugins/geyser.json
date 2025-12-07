@@ -54,13 +54,13 @@
                 "type": "string",
                 "name": "Motd1",
                 "notice": "显示在基岩版服务器列表中的第一行Motd，当<b>继承motd</b>为关闭时生效。注意：请保留双引号。",
-                "exp": "motd1: (.*)"
+                "exp": "primary-motd: (.*)"
             },
             {
                 "type": "string",
                 "name": "Motd2",
                 "notice": "显示在基岩版服务器列表中的第二行Motd，当<b>继承motd</b>为关闭时生效。注意：请保留双引号。",
-                "exp": "motd2: (.*)"
+                "exp": "secondary-motd: (.*)"
             },
             {
                 "type": "boolean",
