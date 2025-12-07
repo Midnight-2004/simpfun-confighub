@@ -97,7 +97,7 @@
             {
                 "type": "boolean",
                 "name": "启用命令方块",
-                "notice": "开启后将允许世界内的命令方块工作。",
+                "notice": "开启后将允许世界内的命令方块工作(1.21.9+失效)。",
                 "exp": "enable-command-block=(true|false)",
                 "rule": [
                     "true",
@@ -117,7 +117,7 @@
             {
                 "type": "boolean",
                 "name": "启用下界维度",
-                "notice": "如果你不想要地狱这个维度可以把它关掉，会导致地狱维度不生成且无法进入。",
+                "notice": "如果你不想要地狱这个维度可以把它关掉，会导致地狱维度不生成且无法进入(1.21.9+失效)。",
                 "exp": "allow-nether=(true|false)",
                 "rule": [
                     "true",
@@ -137,7 +137,7 @@
             {
                 "type": "boolean",
                 "name": "PVP模式",
-                "notice": "允许玩家间互相攻击",
+                "notice": "允许玩家间互相攻击(1.21.9+失效)。",
                 "exp": "pvp=(true|false)",
                 "rule": [
                     "true",
