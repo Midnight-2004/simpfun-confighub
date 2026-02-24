@@ -1,0 +1,19 @@
+[
+    {
+        "file": "./config/fml.toml",
+        "name": "FML配置文件",
+        "notice": "fml.json用于Forge/NeoForge在游戏启动早期阶段（即主窗口创建前）的初始化设置。保存后下次启动生效。",
+        "exps": [
+            {
+                "type": "boolean",
+                "name": "检查更新",
+                "notice": "启用 Forge 全局版本检查，建议关闭此选项。",
+                "exp": "versionCheck = (true|false)",
+                "rule": [
+                        "true",
+                        "false"
+                ]
+            }
+        ]
+    }
+]
